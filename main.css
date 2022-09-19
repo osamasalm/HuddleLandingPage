@@ -1,0 +1,166 @@
+/* General */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: hsl(257, 40%, 49%);
+    padding: 3rem;
+    background-image: url(images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    color: white;
+    /* font-family: 'Poppins', sans-serif;
+    font-family: 'Open Sans', sans-serif; */
+}
+
+/* nav area */
+
+.logo{
+    max-width: 200px;
+    margin-bottom: 4rem;
+}
+
+/* main area */
+
+section{
+    text-align: center;
+}
+
+.illus{
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+}
+
+h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+p{
+    font-size: 1.35rem;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+}
+
+button{
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: hsl(257, 40%, 49%);
+    background-color: white;
+    border: none;
+    padding: .8rem 6rem;
+    border-radius: 5rem;
+    margin-bottom: 2rem;
+    box-shadow: 5px 7px 6px 0px rgba(0,0,0,0.1);
+    transition: background-color 0.5s;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: hsl(300, 69%, 71%);
+    color: white;
+}
+
+/* footer area */
+
+footer{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+footer img{
+    filter: brightness(0) invert(1);
+    width: 2.4rem;
+    padding: .5rem;
+    border: .1rem solid white;
+    border-radius: 4rem;
+    cursor: pointer;
+}
+
+footer img:hover{
+    filter: invert(76%) sepia(24%) saturate(2771%) hue-rotate(240deg) brightness(97%) contrast(88%);
+}
+
+/* Desktop Design area */
+
+@media all and (min-width: 1030px){
+    body{
+        background-image: url(images/bg-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 4rem;
+    }
+    
+    .logo{
+        max-width: 20rem;
+    }
+
+    section{
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 3rem;
+    }
+
+    .illus{
+        margin: 0;
+        width: 100%;
+    }
+
+    .main-text{
+        margin-top: 3rem;
+        text-align: left;
+        max-width: 35rem;
+    }
+
+    h1{
+        font-size: 3rem;
+    }
+
+    footer{
+        justify-content: right;
+    }
+}
+
+/* Animation area */
+
+@-webkit-keyframes hvr-pop {
+    50% {
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+  }
+  @keyframes hvr-pop {
+    50% {
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+  }
+  .hvr-pop {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  }
+  .hvr-pop:hover, .hvr-pop:focus, .hvr-pop:active {
+    -webkit-animation-name: hvr-pop;
+    animation-name: hvr-pop;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+  }
